@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <img src="/image.jpg" alt="To-Do List Image" class="header-image">
+        <h1>To-Do List</h1>
+        <div class="task-input">
+            <input type="text" id="taskInput" placeholder="Add a new task...">
+            <select id="categoryInput">
+                <option value="Personal">Personal</option>
+                <option value="Work">Work</option>
+                <option value="Learning">Learning</option>
+            </select>
+            <button onclick="addTask()">Add Task</button>
+        </div>
+        <div id="tasksContainer">
+            <h2>Personal Tasks</h2>
+            <ul id="personalTasks" class="task-list"></ul>
+
+            <h2>Work Tasks</h2>
+            <ul id="workTasks" class="task-list"></ul>
+
+            <h2>Learning Tasks</h2>
+            <ul id="learningTasks" class="task-list"></ul>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+    <script>
+        
+        if (!localStorage.getItem('loggedIn')) {
+            
+            window.location.href = 'http://127.0.0.1:5500/index.html';
+        }
+    </script>
+</body>
+</html>
+
+
